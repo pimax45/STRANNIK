@@ -1,0 +1,11 @@
+# Core runtime dependencies
+numpy>=2.1
+matplotlib>=3.9
+PyYAML>=6.0
+
+# Optional functionality used by the project
+scipy>=1.14
+rasterio>=1.4
+
+# Test suite
+pytest>=8.3

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terrain-nav"
+version = "0.1.0"
+description = "Terrain referenced navigation prototype for GNSS-denied UAV flight"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "numpy>=2.1",
+  "matplotlib>=3.9",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+offline = ["scipy>=1.14", "rasterio>=1.4"]
+test = ["pytest>=8.3"]
+
+[project.scripts]
+terrain-nav = "terrain_nav.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["terrain_nav*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
