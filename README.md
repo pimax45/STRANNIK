@@ -3,12 +3,10 @@
 Проект состоит ровно из трёх независимых программ:
 
 ```text
-generator/      DEM -> маршрут, измерения и scenario.json
-localizer/      DEM + измерения + начальное состояние -> оценка навигации
-orchestrator/   запускает generator и localizer как отдельные процессы
-```
 
-`generator` и `localizer` не импортируют друг друга. `orchestrator` также не импортирует их код: он выполняет `python -m generator`, после успешного завершения — `python -m localizer`. Единственная связь между стадиями — файлы в каталоге сценария.
+localizer/      DEM + измерения + начальное состояние -> оценка навигации
+
+```
 
 ## Установка
 
@@ -23,12 +21,10 @@ python3.13 -m venv .venv
 После установки доступны три команды:
 
 ```text
-terrain-nav-generator
 terrain-nav-localizer
-terrain-nav-orchestrator
 ```
 
-Без установки editable-пакета используйте `python -m generator`, `python -m localizer`, `python -m orchestrator`.
+Без установки editable-пакета используйте `python -m localizer`.
 
 ## 1. Generator
 
