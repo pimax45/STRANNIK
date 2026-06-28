@@ -1,0 +1,22 @@
+{
+  "test_id": "speed_40_duration_100_frequency_3_turn",
+  "speed_mps": 40.0,
+  "duration_s": 100.0,
+  "frequency_hz": 3.0,
+  "motion": "turn",
+  "status": "completed",
+  "return_code": 0,
+  "runtime_s": 16.338342791998002,
+  "confidence": "low",
+  "best_score": 0.8960070866451919,
+  "position_error_m": 87.86474276063569,
+  "heading_error_deg": 10.0,
+  "speed_error_mps": 4.0,
+  "estimated_x": 611998.6044078041,
+  "estimated_y": 7456269.886075424,
+  "true_x": 612041.8693724115,
+  "true_y": 7456193.4115315685,
+  "result_dir": "/Users/maxon/STRANNIK/results_test/runs/speed_40_duration_100_frequency_3_turn",
+  "trajectory_image": "/Users/maxon/STRANNIK/results_test/image/trajectory_40_100_3_turn.png",
+  "error": null
+}

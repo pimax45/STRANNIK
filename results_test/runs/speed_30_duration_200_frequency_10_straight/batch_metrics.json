@@ -1,0 +1,22 @@
+{
+  "test_id": "speed_30_duration_200_frequency_10_straight",
+  "speed_mps": 30.0,
+  "duration_s": 200.0,
+  "frequency_hz": 10.0,
+  "motion": "straight",
+  "status": "failed",
+  "return_code": 2,
+  "runtime_s": 0.42623429100058274,
+  "confidence": null,
+  "best_score": null,
+  "position_error_m": null,
+  "heading_error_deg": null,
+  "speed_error_mps": null,
+  "estimated_x": null,
+  "estimated_y": null,
+  "true_x": null,
+  "true_y": null,
+  "result_dir": "/Users/maxon/STRANNIK/results_test/runs/speed_30_duration_200_frequency_10_straight",
+  "trajectory_image": null,
+  "error": "orchestrator exited with code 2"
+}

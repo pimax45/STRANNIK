@@ -1,0 +1,152 @@
+{
+  "scenario": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_40_duration_100_frequency_7_straight_08w4r3gu/dataset/scenario.json",
+  "dem": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_40_duration_100_frequency_7_straight_08w4r3gu/dataset/dem.npz",
+  "measurements": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_40_duration_100_frequency_7_straight_08w4r3gu/dataset/radio_samples.npz",
+  "initial_state": {
+    "x": 608085.9177792949,
+    "y": 7455850.0933587765,
+    "velocity_x_mps": 38.252190238521415,
+    "velocity_y_mps": 11.69486818890947,
+    "ground_speed_mps": 40.0,
+    "azimuth_deg": 73.0
+  },
+  "truth": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_40_duration_100_frequency_7_straight_08w4r3gu/dataset/true_path.npz",
+  "localizer_input": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_40_duration_100_frequency_7_straight_08w4r3gu/dataset/localizer_input.json",
+  "heights_text": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_40_duration_100_frequency_7_straight_08w4r3gu/dataset/heights.txt",
+  "sample_rate_hz": 7.000000000000025
+}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/maxon/STRANNIK/localizer/__main__.py", line 203, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/maxon/STRANNIK/localizer/__main__.py", line 140, in main
+    result, metadata = localize_text_heights(
+                       ~~~~~~~~~~~~~~~~~~~~~^
+        args.dem,
+        ^^^^^^^^^
+    ...<18 lines>...
+        save_plots=not args.no_plots,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/maxon/STRANNIK/localizer/app.py", line 394, in localize_text_heights
+    result = _run_localization(
+        prepared.grid,
+    ...<6 lines>...
+        save_plots=save_plots,
+    )
+  File "/Users/maxon/STRANNIK/localizer/app.py", line 64, in _run_localization
+    save_result_plots(
+    ~~~~~~~~~~~~~~~~~^
+        result,
+        ^^^^^^^
+    ...<3 lines>...
+        preview_trajectory=preview_trajectory,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/maxon/STRANNIK/localizer/visualization.py", line 199, in save_result_plots
+    plot_score_heatmap(result.score_grid, output_path=destination / "score_heatmap.png")
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/localizer/visualization.py", line 139, in plot_score_heatmap
+    figure.savefig(output_path, dpi=150)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/figure.py", line 3515, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2281, in print_figure
+    result = print_method(
+        filename,
+    ...<3 lines>...
+        bbox_inches_restore=_bbox_inches_restore,
+        **kwargs)
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2138, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ~~~~^
+        *args, **{k: v for k, v in kwargs.items() if k not in skip}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 537, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 485, in _print_pil
+    FigureCanvasAgg.draw(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 438, in draw
+    self.figure.draw(self.renderer)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/artist.py", line 94, in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/artist.py", line 71, in draw_wrapper
+    return draw(artist, renderer)
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/figure.py", line 3282, in draw
+    mimage._draw_list_compositing_images(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        renderer, self, artists, self.suppressComposite)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 133, in _draw_list_compositing_images
+    a.draw(renderer)
+    ~~~~~~^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/artist.py", line 71, in draw_wrapper
+    return draw(artist, renderer)
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 3350, in draw
+    mimage._draw_list_compositing_images(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        renderer, self, artists, self.get_figure(root=True).suppressComposite)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 133, in _draw_list_compositing_images
+    a.draw(renderer)
+    ~~~~~~^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/artist.py", line 71, in draw_wrapper
+    return draw(artist, renderer)
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 633, in draw
+    im, l, b, trans = self.make_image(
+                      ~~~~~~~~~~~~~~~^
+        renderer, renderer.get_image_magnification())
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 936, in make_image
+    return self._make_image(self._A, bbox, transformed_bbox, clip,
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            magnification, unsampled=unsampled)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 487, in _make_image
+    A_resampled = _resample(self, A.astype(scaled_dtype), out_shape, t)
+  File "/Users/maxon/STRANNIK/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 222, in _resample
+    _image.resample(data, out, transform,
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+                    _interpd_[interpolation],
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+                    image_obj.get_filternorm(),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    image_obj.get_filterrad())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/maxon/STRANNIK/orchestrator/__main__.py", line 224, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/maxon/STRANNIK/orchestrator/__main__.py", line 217, in main
+    subprocess.run(localizer_command, check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 1214, in communicate
+    self.wait()
+    ~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 1280, in wait
+    return self._wait(timeout=timeout)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 2085, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ~~~~~~~~~~~~~~^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 2043, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+COMMAND: /Users/maxon/STRANNIK/.venv/bin/python -m orchestrator --dem output_hh_1.tif --dataset-dir /var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_40_duration_100_frequency_7_straight_08w4r3gu/dataset --output-dir /Users/maxon/STRANNIK/results_test/runs/speed_40_duration_100_frequency_7_straight --heading-deg 73.0 --initial-speed 40.0 --duration 100.0 --sample-rate 7.0 --frequency-step 0.25 --motion straight --height-type radio --baro-altitude 1500.0 --radio-noise-std 0.8 --radio-outlier-probability 0.002 --radio-outlier-std 25.0 --resolution 30.0 --seed 42 --start-lon 59.5 --start-lat 67.2
+

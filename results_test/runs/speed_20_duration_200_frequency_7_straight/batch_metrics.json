@@ -1,0 +1,22 @@
+{
+  "test_id": "speed_20_duration_200_frequency_7_straight",
+  "speed_mps": 20.0,
+  "duration_s": 200.0,
+  "frequency_hz": 7.0,
+  "motion": "straight",
+  "status": "completed",
+  "return_code": 0,
+  "runtime_s": 54.72530700000061,
+  "confidence": "low",
+  "best_score": 0.8193963754857818,
+  "position_error_m": 1.0964453963254372,
+  "heading_error_deg": 2.0,
+  "speed_error_mps": 0.0,
+  "estimated_x": 611910.0895182431,
+  "estimated_y": 7457019.255544279,
+  "true_x": 611911.136803147,
+  "true_y": 7457019.580177668,
+  "result_dir": "/Users/maxon/STRANNIK/results_test/runs/speed_20_duration_200_frequency_7_straight",
+  "trajectory_image": "/Users/maxon/STRANNIK/results_test/image/trajectory_20_200_7_straight.png",
+  "error": null
+}

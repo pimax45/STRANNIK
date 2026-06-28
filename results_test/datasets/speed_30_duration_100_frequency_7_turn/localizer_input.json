@@ -1,0 +1,23 @@
+{
+  "schema": "terrain-nav-text-input/v1",
+  "dem": "/Users/maxon/STRANNIK/output_hh_1.tif",
+  "heights_text": "heights.txt",
+  "height_type": "radio",
+  "start_x": 59.5,
+  "start_y": 67.2,
+  "source_crs": "EPSG:4326",
+  "initial_heading_deg": 73.0,
+  "initial_speed_mps": 30.0,
+  "initial_velocity_x_mps": 28.689142678891063,
+  "initial_velocity_y_mps": 8.771151141682104,
+  "sample_rate_hz": 7.000000000000025,
+  "frequency_is_constant": true,
+  "effective_sample_rate_hz": 7.000000000000025,
+  "frequency_min_hz": 7.0,
+  "frequency_max_hz": 7.0,
+  "baro_altitude_m": 1500.0,
+  "working_resolution_m": 30.0,
+  "map_radius_m": 10000.0,
+  "truth": "true_path.npz",
+  "timestamps_text": "timestamps.txt"
+}

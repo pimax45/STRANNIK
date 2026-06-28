@@ -1,0 +1,41 @@
+{
+  "scenario": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_20_duration_200_frequency_10_straight_tnm9_rhs/dataset/scenario.json",
+  "dem": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_20_duration_200_frequency_10_straight_tnm9_rhs/dataset/dem.npz",
+  "measurements": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_20_duration_200_frequency_10_straight_tnm9_rhs/dataset/radio_samples.npz",
+  "initial_state": {
+    "x": 608085.9177792949,
+    "y": 7455850.0933587765,
+    "velocity_x_mps": 19.126095119260707,
+    "velocity_y_mps": 5.847434094454735,
+    "ground_speed_mps": 20.0,
+    "azimuth_deg": 73.0
+  },
+  "truth": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_20_duration_200_frequency_10_straight_tnm9_rhs/dataset/true_path.npz",
+  "localizer_input": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_20_duration_200_frequency_10_straight_tnm9_rhs/dataset/localizer_input.json",
+  "heights_text": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_20_duration_200_frequency_10_straight_tnm9_rhs/dataset/heights.txt",
+  "sample_rate_hz": 10.000000000000568
+}
+usage: terrain-nav-localizer [-h] [--scenario SCENARIO] [--dem DEM]
+                             [--measurements MEASUREMENTS]
+                             [--heights-text HEIGHTS_TEXT]
+                             [--height-type {radio,ground}]
+                             [--initial-state INITIAL_STATE]
+                             [--start-x START_X] [--start-y START_Y]
+                             [--initial-vx INITIAL_VX]
+                             [--initial-vy INITIAL_VY]
+                             [--heading-deg HEADING_DEG]
+                             [--initial-speed INITIAL_SPEED]
+                             [--sample-rate SAMPLE_RATE]
+                             [--baro-altitude BARO_ALTITUDE]
+                             [--frequency-min FREQUENCY_MIN]
+                             [--frequency-max FREQUENCY_MAX]
+                             [--frequency-step FREQUENCY_STEP]
+                             [--frequency-prefix-samples FREQUENCY_PREFIX_SAMPLES]
+                             [--map-radius MAP_RADIUS]
+                             [--working-resolution WORKING_RESOLUTION]
+                             [--config CONFIG] [--truth TRUTH]
+                             --output-dir OUTPUT_DIR [--preview-trajectory]
+                             [--no-plots]
+terrain-nav-localizer: error: sample_rate_hz must be in the range 1..10 Hz
+COMMAND: /Users/maxon/STRANNIK/.venv/bin/python -m orchestrator --dem output_hh_1.tif --dataset-dir /var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_20_duration_200_frequency_10_straight_tnm9_rhs/dataset --output-dir /Users/maxon/STRANNIK/results_test/runs/speed_20_duration_200_frequency_10_straight --heading-deg 73.0 --initial-speed 20.0 --duration 200.0 --sample-rate 10.0 --frequency-step 0.25 --motion straight --height-type radio --baro-altitude 1500.0 --radio-noise-std 0.8 --radio-outlier-probability 0.002 --radio-outlier-std 25.0 --resolution 30.0 --seed 42 --start-lon 59.5 --start-lat 67.2
+

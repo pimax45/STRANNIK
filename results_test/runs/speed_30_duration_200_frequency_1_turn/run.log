@@ -1,0 +1,48 @@
+{
+  "scenario": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_30_duration_200_frequency_1_turn_k7g0d55h/dataset/scenario.json",
+  "dem": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_30_duration_200_frequency_1_turn_k7g0d55h/dataset/dem.npz",
+  "measurements": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_30_duration_200_frequency_1_turn_k7g0d55h/dataset/radio_samples.npz",
+  "initial_state": {
+    "x": 608085.9177792949,
+    "y": 7455850.0933587765,
+    "velocity_x_mps": 28.689142678891063,
+    "velocity_y_mps": 8.771151141682104,
+    "ground_speed_mps": 30.0,
+    "azimuth_deg": 73.0
+  },
+  "truth": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_30_duration_200_frequency_1_turn_k7g0d55h/dataset/true_path.npz",
+  "localizer_input": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_30_duration_200_frequency_1_turn_k7g0d55h/dataset/localizer_input.json",
+  "heights_text": "/var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_30_duration_200_frequency_1_turn_k7g0d55h/dataset/heights.txt",
+  "sample_rate_hz": 1.0
+}
+{
+  "result": "/Users/maxon/STRANNIK/results_test/runs/speed_30_duration_200_frequency_1_turn/result.json",
+  "current_x": 614112.9270128845,
+  "current_y": 7456373.730484575,
+  "azimuth_deg": 97.0,
+  "ground_speed_mps": 30.0,
+  "confidence": "low",
+  "sample_rate_hz": 1.0,
+  "sample_rate_source": "provided",
+  "coordinates": {
+    "csv": "/Users/maxon/STRANNIK/results_test/runs/speed_30_duration_200_frequency_1_turn/trajectory_coordinates.csv",
+    "json": "/Users/maxon/STRANNIK/results_test/runs/speed_30_duration_200_frequency_1_turn/trajectory_coordinates.json",
+    "point_count": 201,
+    "source_crs": "EPSG:4326",
+    "working_crs": "EPSG:32640",
+    "current": {
+      "index": 200,
+      "timestamp_s": 200.0,
+      "local_x_m": 6027.009233589633,
+      "local_y_m": 523.6371257985011,
+      "working_x_m": 614112.9270128845,
+      "working_y_m": 7456373.730484575,
+      "source_x": 59.63973972763574,
+      "source_y": 67.20245772026057,
+      "longitude_deg": 59.63973972763574,
+      "latitude_deg": 67.20245772026057
+    }
+  }
+}
+COMMAND: /Users/maxon/STRANNIK/.venv/bin/python -m orchestrator --dem output_hh_1.tif --dataset-dir /var/folders/6l/m3wf76l95ygdcn_b5qjqmm2h0000gn/T/terrain_nav_speed_30_duration_200_frequency_1_turn_k7g0d55h/dataset --output-dir /Users/maxon/STRANNIK/results_test/runs/speed_30_duration_200_frequency_1_turn --heading-deg 73.0 --initial-speed 30.0 --duration 200.0 --sample-rate 1.0 --frequency-step 0.25 --motion turn --height-type radio --baro-altitude 1500.0 --radio-noise-std 0.8 --radio-outlier-probability 0.002 --radio-outlier-std 25.0 --resolution 30.0 --seed 42 --start-lon 59.5 --start-lat 67.2
+
